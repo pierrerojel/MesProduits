@@ -6,6 +6,8 @@ import { UpdateProduitComponent } from './update-produit/update-produit.componen
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { ProduitGuard } from './produit.guard';
+import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 const routes: Routes = [
   {path: "produits", component : ProduitsComponent},
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: "updateProduit/:id", component: UpdateProduitComponent},
   {path: 'login', component: LoginComponent},
   {path: 'app-forbidden', component: ForbiddenComponent},
-  {path : "add-produit", component : AddProduitComponent, canActivate:[ProduitGuard]}
+  {path : "add-produit", component : AddProduitComponent, canActivate:[ProduitGuard]},
+  {path: "rechercheParCategorie", component : RechercheParCategorieComponent},
+  {path: "rechercheParNom", component : RechercheParNomComponent},
 ];
 
 @NgModule({
